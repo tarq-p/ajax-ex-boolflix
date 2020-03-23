@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title></title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+        <script src="https://kit.fontawesome.com/34fd85abd9.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
@@ -16,13 +17,13 @@
                   <a href="#news">News</a>
                   <a href="#contact">Contact</a> -->
                   <div class="topnav-right">
-                    <input id="search" name="" placeholder="Search" value="">
+                    <input id="search" name="text" placeholder="Search" value="">
                     <button id="btn-search">Ricerca Film</button>
                 </div>
             </div>
         </header>
 
-        <div class="films-container container1">
+        <div class="films-container container-film container-series">
 
 
         </div>
@@ -30,11 +31,11 @@
 
         <script id="films-template" type="text/x-handlebars-template">
             <div class="film">
-                // <!-- <img src="{{coverFilm}}" alt=""> -->
+                <div class=""><img src="{{{cover}}}"></tr></div>
                 <h3 class='title'>{{titolo}}</h3>
                 <span class="original-title">{{titoloOriginale}}</span>
                 <span class="language">{{lingua}}</span>
-                <span class="vote">{{voto}}</span>
+                <span class="star">{{{voto}}}</span>
             </div>
         </script>
 

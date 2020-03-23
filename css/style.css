@@ -58,14 +58,13 @@ header img {
 
 .film h3 {
     margin: 20px 0;
-    color: white;
+    color: black;
     font-size: 22px;
     text-transform: uppercase;
 }
 
-.film span.title {
-    color: white;
-    font-size: 20px;
+.film span .original-title {
+    color: black;
 }
 
 .film span.language {

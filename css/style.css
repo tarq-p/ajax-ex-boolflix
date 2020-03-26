@@ -31,27 +31,39 @@ header img {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 35px;
     color: red;
 }
 
 .topnav-right {
      float: right;
      position: absolute;
-     top:10px;
-     right: 120px;
+     top:0px;
+     right: 70px;
+
 }
 
+#btn-search i {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-top: none;
+}
 
 
 #search {
     margin-top: -50px;
     width: 50%;
-    border-radius: 5px;
-    font-size: 20px;
+    border-radius: 2px;
+    font-size: 18px;
 
 }
 
+#btn-search{
+    margin-top: 5px;
+    /* padding: 4px 4px; */
+    border-radius: 5px;
+}
 
 .films-container {
     display: flex;

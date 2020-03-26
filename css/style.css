@@ -47,22 +47,22 @@ h1 {
     background-color: black;
     color: white;
     font-size: 20px;
-    border-top: none;
+
 }
 
 
+
 #search {
-    margin-top: -50px;
     width: 50%;
     border-radius: 2px;
     font-size: 18px;
+    border: none;
+
 
 }
 
 #btn-search{
     margin-top: 5px;
-    /* padding: 4px 4px; */
-    border-radius: 5px;
 }
 
 .films-container {

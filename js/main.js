@@ -1,4 +1,5 @@
 
+
 $(document).ready(function() {
 
     var source = $('#films-template').html();
@@ -50,9 +51,8 @@ $(document).ready(function() {
             }
         });
 
-
         $.ajax({
-            url:  'https://api.themoviedb.org/3/search/tv',
+            url: 'https://api.themoviedb.org/3/search/tv',
 
             data: {
                 api_key: 'cd0758b773006b78db6362a500a13095',
@@ -66,14 +66,15 @@ $(document).ready(function() {
                 var films = data.results;
                 for (var i = 0; i < films.length; i++) {
                     var film = films[i];
+                    var voto_effettivo = Math.ceil(films[i].vote_average / 2);
                     console.log(film);
                     var filmstemplate = {
                         cover: poster(film.poster_path),
                         titolo : film.title,
                         titoloOriginale: film.original_name,
                         lingua: film.original_language,
-                        voto: film.vote_average                    
-                    }
+                        voto: stars(voto_effettivo)
+                    };
                     console.log(filmstemplate);
 
                     var cardsFilm = template(filmstemplate);
@@ -94,6 +95,31 @@ $(document).ready(function() {
             }
             return star;
         }
+
+
+        function gestisciLingua(lingua) {
+            var htmlOutput = '';
+
+            if (paesiSupportati.includes(lingua)) {
+
+              htmlOutput =  lingua + '.png';
+            } else {
+              console.log();
+            }
+
+            return htmlOutput;
+
+        }
+
+        function stars(voto){
+            var star = '';
+            for (var k = 0; k < voto; k++) {
+              star += '<i class="fas fa-star"></i>';
+            }
+            return star;
+
+        }
+
 
         function poster(path) {
         if (path !== null) {

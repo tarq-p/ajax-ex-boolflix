@@ -74,3 +74,12 @@ header img {
 .film span.vote {
     color: black;
 }
+
+.bandiera {
+  height:14px;
+}
+
+.fa, .fas {
+  font-size:20px;
+  color: #ffbf4c;
+}

@@ -100,7 +100,7 @@ $(document).ready(function() {
         }
 
 
-        function flag(siglaStato) {         //le due 'g' sono un omaggio a Stephen King
+        function flag(siglaStato) {         
          var bandiera = siglaStato;
          if (siglaStato == 'en') {
               bandiera = 'us';

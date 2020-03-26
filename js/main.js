@@ -36,8 +36,10 @@ $(document).ready(function() {
                         cover: poster(film.poster_path),
                         titolo : film.title,
                         titoloOriginale: film.original_name,
-                        lingua: film.original_language,
-                        voto: stars(voto_effettivo)
+                        // lingua: film.original_language,
+                        voto: stars(voto_effettivo),
+                        siglaStato: flag(film.original_language)
+
                     };
                     console.log(filmstemplate);
 
@@ -70,10 +72,11 @@ $(document).ready(function() {
                     console.log(film);
                     var filmstemplate = {
                         cover: poster(film.poster_path),
-                        titolo : film.title,
+                        titolo: film.title,
                         titoloOriginale: film.original_name,
-                        lingua: film.original_language,
-                        voto: stars(voto_effettivo)
+                        // lingua: film.original_language,
+                        voto: stars(voto_effettivo),
+                        siglaStato: flag(film.original_language)
                     };
                     console.log(filmstemplate);
 
@@ -97,19 +100,15 @@ $(document).ready(function() {
         }
 
 
-        function gestisciLingua(lingua) {
-            var htmlOutput = '';
-
-            if (paesiSupportati.includes(lingua)) {
-
-              htmlOutput =  lingua + '.png';
-            } else {
-              console.log();
-            }
-
-            return htmlOutput;
-
-        }
+        function flag(siglaStato) {         //le due 'g' sono un omaggio a Stephen King
+         var bandiera = siglaStato;
+         if (siglaStato == 'en') {
+              bandiera = 'us';
+         } else if (siglaStato == 'it'){
+             bandiera = 'it';
+         }
+         return bandiera;
+        };
 
         function stars(voto){
             var star = '';
@@ -119,7 +118,6 @@ $(document).ready(function() {
             return star;
 
         }
-
 
         function poster(path) {
         if (path !== null) {

@@ -23,8 +23,8 @@ header {
     opacity: 1;
 }
 header img {
-    height: 50px;
-    margin-top: 10px;
+    height: 30px;
+    margin-top: 5px;
 }
 
 .topnav-right {
@@ -47,7 +47,7 @@ header img {
     flex-basis: 200px;
     padding: 20px;
     margin: 10px 20px;
-    height: 360px;
+    height: 400px;
     background: white;
     text-align: center;
 }
@@ -56,12 +56,12 @@ header img {
     max-width: 100%;
 }
 
-.film h3 {
-    margin: 20px 0;
+/* .film h3 {
+    margin: 2px 0;
     color: black;
-    font-size: 22px;
+    font-size: 18px;
     text-transform: uppercase;
-}
+} */
 
 .film span .original-title {
     color: black;
@@ -76,7 +76,8 @@ header img {
 }
 
 .bandiera {
-  height:14px;
+  height:60px;
+  transform: scale(0.6);
 }
 
 .fa, .fas {

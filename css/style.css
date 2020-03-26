@@ -12,8 +12,10 @@ body {
 
 .container {
     width: 1070px;
-    height: 100%;
+    /* height: 100%; */
     margin: 0 auto;
+    vertical-align: top;
+    margin-top: 0px;
 }
 
 header {
@@ -21,15 +23,35 @@ header {
     height: 70px;
     background: black;
     opacity: 1;
+    position: relative;
 }
 header img {
     height: 30px;
     margin-top: 5px;
 }
 
-.topnav-right {
- float: right;
+h1 {
+    font-size: 30px;
+    color: red;
 }
+
+.topnav-right {
+     float: right;
+     position: absolute;
+     top:10px;
+     right: 120px;
+}
+
+
+
+#search {
+    margin-top: -50px;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+
 
 .films-container {
     display: flex;
@@ -50,10 +72,12 @@ header img {
     height: 400px;
     background: white;
     text-align: center;
+
 }
 
 .film img {
     max-width: 100%;
+
 }
 
 /* .film h3 {

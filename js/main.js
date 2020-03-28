@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
 
     var source = $('#films-template').html();
@@ -34,7 +32,7 @@ $(document).ready(function() {
                     console.log(film);
                     var filmstemplate = {
                         cover: poster(film.poster_path),
-                        titolo : film.title,
+                        titolo: film.title,
                         titoloOriginale: film.original_name,
                         // lingua: film.original_language,
                         voto: stars(voto_effettivo),
@@ -91,42 +89,42 @@ $(document).ready(function() {
         });
 
 
-        function stars(vote){
+        function stars(vote) {
             var star = '';
             for (var k = 0; k < voto; k++) {
-              star += '<i class="fas fa-star"></i>';
+                star += '<i class="fas fa-star"></i>';
             }
             return star;
         }
 
 
-        function flag(siglaStato) {         
-         var bandiera = siglaStato;
-         if (siglaStato == 'en') {
-              bandiera = 'us';
-         } else if (siglaStato == 'it'){
-             bandiera = 'it';
-         }
-         return bandiera;
+        function flag(siglaStato) {
+            var bandiera = siglaStato;
+            if (siglaStato == 'en') {
+                bandiera = 'us';
+            } else if (siglaStato == 'it') {
+                bandiera = 'it';
+            }
+            return bandiera;
         };
 
-        function stars(voto){
+        function stars(voto) {
             var star = '';
             for (var k = 0; k < voto; k++) {
-              star += '<i class="fas fa-star"></i>';
+                star += '<i class="fas fa-star"></i>';
             }
             return star;
 
         }
 
         function poster(path) {
-        if (path !== null) {
-            return imgBaseUrl + imgSize + path;
-        } else {
-            return 'https://image.freepik.com/vettori-gratuito/errore-404-non-trovato-glitch-effect_8024-4.jpg';
+            if (path !== null) {
+                return imgBaseUrl + imgSize + path;
+            } else {
+                return 'https://image.freepik.com/vettori-gratuito/errore-404-non-trovato-glitch-effect_8024-4.jpg';
 
+            };
         };
-    };
 
     });
 });

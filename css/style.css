@@ -23,7 +23,7 @@ header {
     height: 70px;
     background: black;
     opacity: 1;
-    position: relative;
+    /* position: relative; */
 }
 
 header img {
@@ -42,13 +42,14 @@ h1 {
     font-size: 35px;
     color: #b2eaf9;
 }
+ .topnav {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-right: -100px;
+     vertical-align: center;
+ }
 
-.topnav-right {
-    float: right;
-    position: absolute;
-    top: 8px;
-    right: 70px;
-}
 
 #btn-search i {
     background-color: black;

@@ -40,13 +40,13 @@ header img {
 
 h1 {
     font-size: 35px;
-    color: red;
+    color: #b2eaf9;
 }
 
 .topnav-right {
     float: right;
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 70px;
 }
 

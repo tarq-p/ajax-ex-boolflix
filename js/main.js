@@ -12,6 +12,9 @@ $(document).ready(function() {
         var valoreInput = $('input').val();
         $('.container-film').html('');
 
+        
+
+
 
         $.ajax({
             url: 'https://api.themoviedb.org/3/search/movie',
